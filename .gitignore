@@ -1,0 +1,62 @@
+# Local by Flywheel #
+####################
+/conf
+/logs
+/app/public
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+!wp-includes/**/*.gz
+
+# Logs and databases #
+######################
+*.log
+*.sql
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+
+# Vim generated files #
+######################
+*.un~
+
+# Cache Files #
+##############
+**/wphb-cache/*
+
+# Processors #
+##############
+.sass-cache
+.scssc
+codekit-config.json
+compass_app_log.txt
+
+# Modules #
+#######################
+**/node_modules/
+**/bower_components/
+
+# QA #
+###############
+.env
+
+# Misc #
+############
+.htaccess
+sitemap.xml
+sitemap.xml.gz
