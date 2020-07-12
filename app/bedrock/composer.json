@@ -37,7 +37,11 @@
     "oscarotero/env": "^1.2.0",
     "roots/wordpress": "5.4.1",
     "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0"
+    "roots/wp-password-bcrypt": "1.0.0",
+    "gatsbyjs/wp-gatsby": "^0.4.9",
+    "wp-graphql/wp-graphql": "^0.10.3",
+    "wpackagist-theme/twentytwenty": "^1.4",
+    "wp-graphql/wp-graphiql": "^1.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.4",
