@@ -39,7 +39,7 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "gatsbyjs/wp-gatsby": "^0.4.9",
-    "wp-graphql/wp-graphql": "^0.10.3",
+    "wp-graphql/wp-graphql": "^0.9.1",
     "wpackagist-theme/twentytwenty": "^1.4",
     "wp-graphql/wp-graphiql": "^1.0"
   },
