@@ -54,6 +54,7 @@ coverage
 
 # Cache Files
 **/wphb-cache/*
+.wordpress-cache
 .cache/
 public
 
@@ -101,8 +102,14 @@ build/Release
 # dotenv environment variable files
 .env
 .env*
+.env.*
+!.env.GATSBY_CONCURRENT_DOWNLOAD
+!.env.example
 
 # Misc
 .htaccess
 sitemap.xml
 sitemap.xml.gz
+.idea
+WordPress/web/
+fakerpress.zip
