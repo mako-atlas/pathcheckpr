@@ -1,0 +1,10 @@
+.container {
+    width: 80%;
+    max-width: 1080px;
+    margin: auto;
+
+    &--expanded {
+        width: 85%;
+        max-width: 100%;
+    }
+}

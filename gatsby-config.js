@@ -11,6 +11,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -42,6 +43,21 @@ module.exports = {
         typeName: `WPGraphQL`,
         fieldName: `wpgraphql`,
         url: `${process.env.WPGRAPHQL_URL}`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-chakra-ui",
+      options: {
+        /**
+         * @property {boolean} [isResettingCSS=true]
+         * if false, this plugin will not use `<CSSReset />
+         */
+        isResettingCSS: true,
+        /**
+         * @property {boolean} [isUsingColorMode=true]
+         * if false, this plugin will not use <ColorModeProvider />
+         */
+        isUsingColorMode: true,
       },
     },
   ],

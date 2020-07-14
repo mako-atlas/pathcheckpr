@@ -1,22 +1,18 @@
 import React  from "react";
-
-import Layout from "../../components/layout";
+import DefaultLayout from "../../components/layouts/DefaultLayout";
 import SEO from "../../components/seo";
-
+import { Heading } from "@chakra-ui/core";
 
 const Page = ({ pageContext }) => {
-
-  const page = pageContext.page
+  const page = pageContext.page;
 
   return (
-    <Layout>
+    <DefaultLayout>
       <SEO title={page.title} />
-
-      <h1>{page.title}</h1>
+      <Heading as="h1">{page.title}</Heading>
       <div dangerouslySetInnerHTML={{__html: page.content}} />
-
-    </Layout>
-  )
+    </DefaultLayout>
+  );
 }
 
 export default Page;
