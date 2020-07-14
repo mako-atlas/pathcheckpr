@@ -3,12 +3,11 @@ import DefaultLayout from "../components/layouts/DefaultLayout";
 import SEO from "../components/seo";
 import { Heading } from "@chakra-ui/core";
 
-const NotFoundPage = () => (
+const About = () => (
   <DefaultLayout>
-    <SEO title="404: Not found" />
-    <Heading as="h1">Not Found</Heading>
-    <p>You just hit a route that doesn't exist... the sadness.</p>
+    <SEO title="About" />
+    <Heading as="h1">About</Heading>
   </DefaultLayout>
 );
 
-export default NotFoundPage;
+export default About;
