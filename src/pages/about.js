@@ -3,7 +3,8 @@ import DefaultLayout from "../components/layouts/DefaultLayout";
 import SEO from "../components/seo";
 import NewsGrid from "../components/NewsGrid";
 import { Heading, Text, Flex, List, ListItem, Divider, Link, Box } from "@chakra-ui/core";
-import Image from "../components/image"
+import Image from "../components/image";
+import IconButton from "../components/IconButton";
 
 const supporterLogos = [
   'ciscoLogo',
@@ -14,6 +15,37 @@ const supporterLogos = [
   'slidoLogo',
   'tripleBlindLogo'
 ];
+
+const socialMediaList = [
+  {
+    name: 'instagram',
+    icon: 'FaInstagram',
+    buttonColor: '#ea2c59',
+    iconColor: 'white',
+    link : 'https://www.instagram.com/covidsafepaths/'
+  },
+  {
+    name: 'facebook',
+    icon: 'FaFacebookF',
+    buttonColor: '#3b5998',
+    iconColor: 'white',
+    link : 'https://www.facebook.com/covid.safe.paths/'
+  },
+  {
+    name: 'linkedin',
+    icon: 'FaLinkedinIn',
+    buttonColor: '#007bb6',
+    iconColor: 'white',
+    link : 'https://www.linkedin.com/company/65264178/'
+  },
+  {
+    name: 'twitter',
+    icon: 'FaTwitter',
+    buttonColor: '#00aced',
+    iconColor: 'white',
+    link : 'https://twitter.com/PathCheck_fnd'
+  }
+]
 
 const About = () => (
   <DefaultLayout>
@@ -55,6 +87,11 @@ const About = () => (
           <ListItem><Link href="https://pathcheck.org/events" color="blue.400">Attend a webinar or online symposium</Link></ListItem>
         </List>
         <Text pb="10px" fontWeight="bold">Follow Us on Social Media</Text>
+        <Flex>
+          {socialMediaList.map(social => (
+              <IconButton iconObject={social}/>
+          ))} 
+        </Flex>
       </Flex>
     </Flex>
 

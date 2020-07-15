@@ -37,6 +37,9 @@ const colors = {
     800: '#1f1c31',
     900: '#0a0814',
   },
+  socialMedia: {
+    100: '#55acee',
+  }
 }
 
 const appTheme = {
