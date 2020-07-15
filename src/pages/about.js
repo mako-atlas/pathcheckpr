@@ -2,7 +2,18 @@ import React from "react";
 import DefaultLayout from "../components/layouts/DefaultLayout";
 import SEO from "../components/seo";
 import NewsGrid from "../components/NewsGrid";
-import { Heading, Text, Flex, List, ListItem, Divider, Link, Image } from "@chakra-ui/core";
+import { Heading, Text, Flex, List, ListItem, Divider, Link, Box } from "@chakra-ui/core";
+import Image from "../components/image"
+
+const supporterLogos = [
+  'ciscoLogo',
+  'upstatementLogo',
+  'extremeSolutionLogo',
+  'signNowLogo',
+  'slackLogo',
+  'slidoLogo',
+  'tripleBlindLogo'
+];
 
 const About = () => (
   <DefaultLayout>
@@ -51,11 +62,17 @@ const About = () => (
       <Text width={{ base:"100%", lg:"20%" }} fontSize="25px">
       Supporters
       </Text>
-      <Text width={{ base:"100%", lg:"80%" }} fontSize="17px">
-      Many companies are donating goods and services to PathCheck Foundation, which makes our work possible. We’re grateful for this support. Some of our supporters include:
-      </Text>
-      <Flex>
-        <Image src="../images/cisco-logo.png"/>
+      <Flex width={{ base:"100%", lg:"80%" }} wrap="wrap">
+        <Text width="100%" fontSize="17px">
+        Many companies are donating goods and services to PathCheck Foundation, which makes our work possible. We’re grateful for this support. Some of our supporters include:
+        </Text>
+        <Flex width="100%" wrap="wrap" align="center">
+          {supporterLogos.map((logo) => (
+            <Box width={{ base:"50%", lg:"33%" }} px="40px" py="20px">
+              <Image imageName={logo}/>
+            </Box>
+          ))}
+        </Flex>
       </Flex>
     </Flex>
 

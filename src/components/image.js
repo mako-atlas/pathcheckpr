@@ -13,20 +13,61 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
+const Image = (props) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      ciscoLogo: file(relativePath: { eq: "cisco-logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      upstatementLogo: file(relativePath: { eq: "upstatement-logo.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      extremeSolutionLogo: file(relativePath: { eq: "extreme-solution-logo.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      signNowLogo: file(relativePath: { eq: "sign-now-logo.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      slackLogo: file(relativePath: { eq: "slack-logo.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      slidoLogo: file(relativePath: { eq: "slido-logo.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      tripleBlindLogo: file(relativePath: { eq: "triple-blind-logo.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
-
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data[props.imageName].childImageSharp.fluid} />
 }
 
 export default Image
