@@ -7,7 +7,7 @@ const Technology = () => (
   <DefaultLayout>
     <SEO title="Technology" />
     <Flex wrap='wrap' padding="24px">
-      <Box width={{ base:"100%", lg:"50%" }}>
+      <Box width={{ base:"100%", lg:"60%" }}>
         <Heading as="h1" fontSize="50px" paddingBottom="36px">
           A Platform for Digital Contact Tracing and Exposure Notification
         </Heading>
@@ -21,12 +21,12 @@ const Technology = () => (
           <ListItem marginBottom="20px">Adaptable to your needs</ListItem>
         </List>
       </Box>
-      <Box width={{ base:"100%", lg:"50%" }}>
+      <Box width={{ base:"100%", lg:"40%" }}>
         <Image src="https://pathcheck.org/resources/pathcheck-technology.png"/>
       </Box>
     </Flex>
-    <Box bg="white" borderRadius="lg" padding="50px 100px">
-      <Heading as="h2" fontSize="50px" paddingBottom="12px" textAlign="center">
+    <Box bg="white" borderRadius="24px" padding={{ base:"50px", lg:"50px 100px" }}>
+      <Heading as="h2" fontSize={{ base:"28px", lg:"50px" }} paddingBottom="12px" textAlign="center">
         One Platform. Many Solutions.
       </Heading>
       <Text textAlign="center">
@@ -34,9 +34,10 @@ const Technology = () => (
       </Text>
       <Flex align="center" textAlign="center" padding="50px 0" wrap="wrap">
         <Box width={{ base:"100%", lg:"33%" }}>
-          <Image src="https://pathcheck.org/resources/app_no_exposure_calendar.png"/>
+          <Image display={{ base: "block", lg:"none" }} padding="24px 0" src="https://pathcheck.org/resources/app_no_exposure_calendar.png"/>
+          <Image display={{ base: "none", lg:"block" }} padding="24px 0" src="https://pathcheck.org/resources/app-possible-risk.png"/>  
         </Box>
-        <Box width={{ base:"100%", lg:"33%" }}>
+        <Box width={{ base:"33%"}} display={{ base: "none", lg:"block" }}>
           <List styleType="none">
             <ListItem marginBottom="20px">WiFi Proximity*</ListItem>
             <ListItem marginBottom="20px">Testing Diary*</ListItem>
@@ -44,14 +45,27 @@ const Technology = () => (
           </List>
         </Box>
         <Box width={{ base:"100%", lg:"33%" }}>
-          <Image src="https://pathcheck.org/resources/app_exposure_history-1.png"/>
+          <Image display={{ base: "block", lg:"none" }} padding="24px 0"  src="https://pathcheck.org/resources/app_exposure_history-1.png"/>
+          <Image display={{ base: "none", lg:"block" }} padding="24px 0" 
+          src="https://pathcheck.org/resources/app-exposure-history-diagram.png"/>
         </Box>
       </Flex>
-      <Text textAlign="center">
+      <Text padding="24px 0" textAlign="center">
         Customize your solution with build-time and run-time options.
       </Text>
-      <Flex padding="50px 0">
-        <Box width={{ base:"100%", lg:"50%" }}>
+      <List textAlign="center" display={{ base: "block", lg:"none" }}>
+        <ListItem>Location Diary</ListItem>
+        <ListItem>Symptom Diary</ListItem>
+        <ListItem>Exposure Notification</ListItem>
+        <ListItem>GAEN Proximity</ListItem>
+        <ListItem>Information Distribution</ListItem>
+        <ListItem>Secure Communication</ListItem>
+        <ListItem>WiFi Proximity*</ListItem>
+        <ListItem>Testing Diary*</ListItem>
+        <ListItem>Bluetooth Beacons*</ListItem>
+      </List>
+      <Flex wrap='wrap'>
+        <Flex flexDirection="column" align="center" padding="24px 0" width={{ base:"100%", lg:"50%" }}>
           <Heading as="h2" fontSize="25px" paddingBottom="24px">
             Build Time Choice
           </Heading>
@@ -63,24 +77,27 @@ const Technology = () => (
             <ListItem marginBottom="20px">
               <ListIcon icon="check-circle" color="#4051db" />Build your app</ListItem>
           </List>
-        </Box>
-        <Box width={{ base:"100%", lg:"50%" }}>
+        </Flex>
+        <Flex flexDirection="column" align="center" padding="24px 0" width={{ base:"100%", lg:"50%" }}>
           <Heading as="h2" fontSize="25px" paddingBottom="24px">
             Run Time Choice
           </Heading>
           <List styleType="none">
             <ListItem marginBottom="20px">
-              <ListIcon icon="check-circle" color="#4051db" />Select the modules you need</ListItem>
+              <ListIcon icon="check-circle" color="#4051db"/>Select the modules you need</ListItem>
             <ListItem marginBottom="20px">
-              <ListIcon icon="check-circle" color="#4051db" />Configure customization</ListItem>
+              <ListIcon icon="check-circle" color="#4051db"/>Configure customization</ListItem>
             <ListItem marginBottom="20px">
-              <ListIcon icon="check-circle" color="#4051db" />Build your app</ListItem>
+              <ListIcon icon="check-circle" color="#4051db"/>Build your app</ListItem>
           </List>
-        </Box>
+        </Flex>
       </Flex>
+      <Text textAlign="right" fontSize="14px">
+        Coming soon *
+      </Text>
     </Box>
-    <Flex margin="80px 0">
-      <Box>
+    <Flex margin="80px 0" wrap='wrap'>
+      <Box width={{ base:"100%", lg:"75%" }}>
         <Heading as="h2" fontSize="50px" paddingBottom="12px">
           The PathCheck GAEN Solution
         </Heading>
@@ -88,22 +105,22 @@ const Technology = () => (
           Our end-to-end, open source Google Apple Exposure Notification (GAEN) solution includes app, server, and services.
         </Text>
       </Box>
-      <Box>
-        <Button bg="white" color="blue.500" padding="1.75rem 2rem" borderRadius="2rem" size="sm" _hover={{ bg:"blue.500", color:"white" }} ml="8" >
+      <Box width={{ base:"100%", lg:"25%" }} textAlign="right" marginTop={{ base:"12px", lg:"0" }}>
+        <Button bg="transparent" border="2px solid #4051db" color="#4051db" padding="1.75rem 2rem" borderRadius="2rem" size="sm" _hover={{ bg:"#4051db", color:"white" }} ml="8" fontSize="20px">
           <Link href="https://pathcheck.org/en/technology/google-apple-exposure-notification-solution/">Learn More</Link>
-          <Icon name="arrow-forward" size="24px" />
+          <Icon name="arrow-forward" size="24px"/>
         </Button>
       </Box>
     </Flex>
-    <Flex marginBottom="60px">
+    <Flex marginBottom="60px" wrap='wrap'>
       <Box width={{ base:"100%", lg:"33%" }}>
-        <Flex>
-          <Heading as="h3" fontSize="25px" paddingBottom="12px">
-            Customizable GAEN App
-          </Heading>
-          <Box>
+        <Flex align="center" paddingBottom="12px" minHeight="75px">
+          <Box marginRight="12px">
             <Image src="https://pathcheck.org/resources/pathcheck-gaen-app.png"/>
           </Box>
+          <Heading as="h3" fontSize="25px" marginRight="12px">
+            Customizable GAEN App
+          </Heading>
         </Flex>
         <List styleType="none">
           <ListItem marginBottom="20px">
@@ -125,13 +142,13 @@ const Technology = () => (
         </List>
       </Box>
       <Box width={{ base:"100%", lg:"33%" }}>
-        <Flex>
-          <Heading as="h3" fontSize="25px" paddingBottom="12px">
-          Exposure Notification Server
-          </Heading>
-          <Box>
+        <Flex align="center" paddingBottom="12px" minHeight="75px">
+          <Box marginRight="12px">
             <Image src="https://pathcheck.org/resources/exposure-notification-server.png"/>
           </Box>
+          <Heading as="h3" fontSize="25px" marginRight="12px">
+          Exposure Notification Server
+          </Heading>
         </Flex>
         <List styleType="none">
           <ListItem marginBottom="20px">
@@ -149,13 +166,13 @@ const Technology = () => (
         </List>
       </Box>
       <Box width={{ base:"100%", lg:"33%" }}>
-        <Flex>
-          <Heading as="h3" fontSize="25px" paddingBottom="12px">
-            Hosting and Services
-          </Heading>
-          <Box>
+        <Flex align="center" paddingBottom="12px" minHeight="75px">
+          <Box marginRight="12px">
             <Image src="https://pathcheck.org/resources/hosting-and-services.png"/>
           </Box>
+          <Heading as="h3" fontSize="25px" marginRight="12px">
+            Hosting and Services
+          </Heading>
         </Flex>
         <List styleType="none">
           <ListItem marginBottom="20px">
@@ -178,8 +195,8 @@ const Technology = () => (
       </Box>
     </Flex>
     <Divider/>
-    <Flex margin="80px 0">
-      <Box>
+    <Flex margin="80px 0" wrap='wrap'>
+      <Box width={{ base:"100%", lg:"75%" }}>
         <Heading as="h2" fontSize="50px" paddingBottom="12px">
         The PathCheck GPS+ Solution
         </Heading>
@@ -187,22 +204,22 @@ const Technology = () => (
           Our end-to-end, open source GPS and multi-protocol solutions complement manual contact tracing with new capabilities.
         </Text>
       </Box>
-      <Box>
-        <Button bg="white" color="blue.500" padding="1.75rem 2rem" borderRadius="2rem" size="sm" _hover={{ bg:"blue.500", color:"white" }} ml="8" >
+      <Box width={{ base:"100%", lg:"25%" }} textAlign="right" marginTop={{ base:"12px", lg:"0" }}>
+        <Button bg="transparent" border="2px solid #4051db" color="#4051db" padding="1.75rem 2rem" borderRadius="2rem" size="sm" _hover={{ bg:"#4051db", color:"white" }} ml="8" fontSize="20px">
           <Link href="https://pathcheck.org/en/technology/gps-digital-contact-tracing-solution/">Learn More</Link>
-          <Icon name="arrow-forward" size="24px" />
+          <Icon name="arrow-forward" size="24px"/>
         </Button>
       </Box>
     </Flex>
-    <Flex>
+    <Flex marginBottom="60px" wrap='wrap'>
       <Box width={{ base:"100%", lg:"33%" }}>
-        <Flex>
-          <Heading as="h3" fontSize="25px" paddingBottom="12px">
-            PathCheck App
-          </Heading>
-          <Box>
+        <Flex align="center" paddingBottom="12px" minHeight="75px">
+          <Box marginRight="12px">
             <Image src="https://pathcheck.org/resources/pathcheck-gaen-app.png"/>
           </Box>
+          <Heading as="h3" fontSize="25px" marginRight="12px">
+            PathCheck App
+          </Heading>
         </Flex>
         <List styleType="none">
           <ListItem marginBottom="20px">
@@ -228,13 +245,13 @@ const Technology = () => (
         </List>
       </Box>
       <Box width={{ base:"100%", lg:"33%" }}>
-        <Flex>
-          <Heading as="h3" fontSize="25px" paddingBottom="12px">
-            SafePlaces
-          </Heading>
-          <Box>
+        <Flex align="center" paddingBottom="12px" minHeight="75px">
+          <Box marginRight="12px">
             <Image src="https://pathcheck.org/resources/safeplaces.png"/>
           </Box>
+          <Heading as="h3" fontSize="25px" marginRight="12px">
+            SafePlaces
+          </Heading>
         </Flex>
         <List styleType="none">
           <ListItem marginBottom="20px">
@@ -256,13 +273,13 @@ const Technology = () => (
         </List>
       </Box>
       <Box width={{ base:"100%", lg:"33%" }}>
-        <Flex>
-          <Heading as="h3" fontSize="25px" paddingBottom="12px">
-            Hosting and Services
-          </Heading>
-          <Box>
+        <Flex align="center" paddingBottom="12px" minHeight="75px">
+          <Box marginRight="12px">
             <Image src="https://pathcheck.org/resources/hosting-and-services.png"/>
           </Box>
+          <Heading as="h3" fontSize="25px" marginRight="12px">
+            Hosting and Services
+          </Heading>
         </Flex>
         <List styleType="none">
           <ListItem marginBottom="20px">
