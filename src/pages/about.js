@@ -2,7 +2,7 @@ import React from "react";
 import DefaultLayout from "../components/layouts/DefaultLayout";
 import SEO from "../components/seo";
 import NewsGrid from "../components/NewsGrid";
-import { Heading, Text, Flex, List, ListItem, Divider, Link } from "@chakra-ui/core";
+import { Heading, Text, Flex, List, ListItem, Divider, Link, Image } from "@chakra-ui/core";
 
 const About = () => (
   <DefaultLayout>
