@@ -40,29 +40,29 @@ const colors = {
 }
 
 const appTheme = {
-    ...theme,
-    colors: {
-        ...theme.colors,
-        ...colors,
-    },
+  ...theme,
+  colors: {
+    ...theme.colors,
+    ...colors,
+  }
 };
 
 const cssConfig = (theme) => ({
-    light: {
-      color: theme.colors.gray[900],
-      bg: theme.colors.gray[50],
-      borderColor: theme.colors.gray[200],
-      placeholderColor: theme.colors.gray[500]
-    },
-    dark: {
-      color: theme.colors.whiteAlpha[900],
-      bg: theme.colors.gray[900],
-      borderColor: theme.colors.whiteAlpha[300],
-      placeholderColor: theme.colors.whiteAlpha[400]
-    }
+  light: {
+    color: theme.colors.gray[900],
+    bg: theme.colors.gray[50],
+    borderColor: theme.colors.gray[200],
+    placeholderColor: theme.colors.gray[500]
+  },
+  dark: {
+    color: theme.colors.whiteAlpha[900],
+    bg: theme.colors.gray[900],
+    borderColor: theme.colors.whiteAlpha[300],
+    placeholderColor: theme.colors.whiteAlpha[400]
+  }
 });
 
 export {
-    appTheme,
-    cssConfig,
+  appTheme,
+  cssConfig,
 };
