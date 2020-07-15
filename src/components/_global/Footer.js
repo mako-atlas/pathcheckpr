@@ -1,6 +1,6 @@
 import React from "react";
-import { Link as GatsbyLink } from "gatsby";
-import { Box, Button, Flex, Heading, Image, Link, Text, useColorMode } from "@chakra-ui/core";
+// import { Link as GatsbyLink } from "gatsby";
+import { Box, Button, Flex, Heading, Image, Text, useColorMode } from "@chakra-ui/core";
 
 const links = [
   {
@@ -51,11 +51,12 @@ const links = [
 ];
 
 const Column = ({ label, items }) => (
-  <Box width={{ base:"100%", lg:"20%" }} mt="4" pr="4">
+  <Box key={label} width={{ base:"100%", lg:"20%" }} mt="4" pr="4">
     <Heading size="md">{label}</Heading>
-      {items.map(i => (
-        <Text mt="2">
-          <Link as={GatsbyLink} to={i.url}>{i.label}</Link>
+      {items.map((i) => (
+        <Text key={i.label} mt="2">
+          {/* <Link as={GatsbyLink} to={i.url}>{i.label}</Link> */}
+          {i.label}
         </Text>
       ))}
   </Box>

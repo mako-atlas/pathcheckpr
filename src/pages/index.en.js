@@ -3,8 +3,8 @@ import DefaultLayout from "../components/layouts/DefaultLayout";
 import SEO from "../components/seo";
 import { Heading } from "@chakra-ui/core";
 
-const Homepage = () => (
-  <DefaultLayout>
+const Homepage = ({ location }) => (
+  <DefaultLayout location={location} lang="en">
     <SEO title="Homepage" />
     <Heading as="h1">Homepage</Heading>
   </DefaultLayout>

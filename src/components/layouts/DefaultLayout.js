@@ -6,10 +6,10 @@ import { Box } from "@chakra-ui/core";
 
 import '../scss/ui.scss';
 
-const DefaultLayout = ({ children }) => {
+const DefaultLayout = ({ children, location, lang }) => {
   return (
     <AppLayout>
-      <Header />
+      <Header location={location} lang={lang} />
       <Box className="container" pt="8" pb="8">
         <main>{children}</main>
       </Box>
@@ -20,6 +20,7 @@ const DefaultLayout = ({ children }) => {
 
 DefaultLayout.propTypes = {
   children: PropTypes.node.isRequired,
+  lang: PropTypes.string.isRequired,
 };
 
 export default DefaultLayout;
