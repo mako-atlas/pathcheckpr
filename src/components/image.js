@@ -19,55 +19,55 @@ const Image = (props) => {
       ciscoLogo: file(relativePath: { eq: "cisco-logo.png" }) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       },
       upstatementLogo: file(relativePath: { eq: "upstatement-logo.png" }) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       },
       extremeSolutionLogo: file(relativePath: { eq: "extreme-solution-logo.png" }) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       },
       signNowLogo: file(relativePath: { eq: "sign-now-logo.png" }) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       },
       slackLogo: file(relativePath: { eq: "slack-logo.png" }) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       },
       slidoLogo: file(relativePath: { eq: "slido-logo.png" }) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       },
       tripleBlindLogo: file(relativePath: { eq: "triple-blind-logo.png" }) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
     }
   `)
-  return <Img fluid={data[props.imageName].childImageSharp.fluid} />
+  return <Img fluid={data[props.imageName].childImageSharp.fluid}/>
 }
 
 export default Image
