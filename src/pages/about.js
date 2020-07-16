@@ -29,7 +29,7 @@ const socialMediaList = [
     icon: 'FaFacebookF',
     buttonColor: '#3b5998',
     iconColor: 'white',
-    link : 'https://www.facebook.com/covid.safe.paths/'
+    link : 'https://www.facebook.com/PathCheck'
   },
   {
     name: 'linkedin',
