@@ -36,7 +36,7 @@ const colors = {
     700: '#342e4f',
     800: '#1f1c31',
     900: '#0a0814',
-  },
+  }
 }
 
 const appTheme = {
