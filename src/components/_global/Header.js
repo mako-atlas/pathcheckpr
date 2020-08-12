@@ -1,26 +1,25 @@
-import React from "react";
-import { Link as GatsbyLink } from "gatsby";
-import { Box, Heading, Flex, Text, Button, Link, useColorMode } from "@chakra-ui/core";
+import React from "react"
+// import { Link as GatsbyLink } from "gatsby"
+import { Heading, Flex, useColorMode } from "@chakra-ui/core"
+// import LanguageSelector from "./LanguageSelector"
 
-const MenuItem = ({ url, label }) => (
-  <Text mr={{ base: 0, md: 4 }}>
-    <Link as={GatsbyLink} to={url}>{label}</Link>
-  </Text>
-);
+// const MenuItem = ({ url, label }, lang) => (
+//   <Text key={label} mr={{ base: 0, md: 4 }}>
+//     <Link as={GatsbyLink} to={lang === "en" ? url : `/${lang}${url}`}>
+//       {label}
+//     </Link>
+//   </Text>
+// )
 
 const Header = props => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const [show, setShow] = React.useState(false);
-  const handleToggle = () => setShow(!show);
-  const bgColor = { light: "gray.50", dark: "blue.500" };
-  const color = { light: "blue.400", dark: "whiteAlpha.900" };
+  const { colorMode } = useColorMode()
+  // const [show, setShow] = React.useState(false)
+  // const handleToggle = () => setShow(!show)
+  const bgColor = { light: "gray.50", dark: "blue.500" }
+  const color = { light: "blue.400", dark: "whiteAlpha.900" }
 
   return (
-    <Flex
-      align="center"
-      bg={bgColor[colorMode]}
-      color={color[colorMode]}
-    >
+    <Flex align="center" bg={bgColor[colorMode]} color={color[colorMode]}>
       <Flex
         as="nav"
         align="center"
@@ -31,11 +30,12 @@ const Header = props => {
         className="container container--expanded"
       >
         <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={"-.1rem"}>
-            <Link as={GatsbyLink} to="/">PathCheck PR</Link>
+          <Heading as="h1" size="lg">
+            Rastrea el Virus
           </Heading>
         </Flex>
 
+        {/* 
         <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
           <svg
             fill="white"
@@ -60,20 +60,16 @@ const Header = props => {
             {url: '/about', label: 'About'},
             {url: '/technology', label: 'Technology'},
             {url: '/resources', label: 'Resources'},
-          ].map(i => MenuItem(i))}
+          ].map(i => MenuItem(i, props.lang))}
         </Box>
 
-        <Box
-          display={{ sm: show ? "block" : "none", md: "block" }}
-          mt={{ base: 4, md: 0 }}
-        >
-          <Button bg="transparent" border="1px" size="sm" _hover={{ bg:"blue.500", color:"white", borderColor:"blue.500" }} onClick={toggleColorMode}>
-            Toggle Mode
-          </Button>
+        <Box>
+          <LanguageSelector location={props.location} lang={props.lang} />
         </Box>
+        */}
       </Flex>
     </Flex>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
