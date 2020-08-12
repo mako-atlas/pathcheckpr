@@ -1,8 +1,9 @@
-let activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
+let activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 
 require("dotenv").config({
   path: `.env.${activeEnv}`,
-});
+})
 
 module.exports = {
   siteMetadata: {
@@ -57,17 +58,23 @@ module.exports = {
          * @property {boolean} [isUsingColorMode=true]
          * if false, this plugin will not use <ColorModeProvider />
          */
-        isUsingColorMode: true,
+        isUsingColorMode: false,
       },
     },
+    // {
+    //   resolve: "gatsby-plugin-i18n",
+    //   options: {
+    //     langKeyDefault: "en",
+    //     langKeyForNull: "en",
+    //     prefixDefault: false,
+    //     useLangKeyLayout: false,
+    //   },
+    // },
     {
-      resolve: 'gatsby-plugin-i18n',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        langKeyDefault: 'en',
-        langKeyForNull: 'en',
-        prefixDefault: false,
-        useLangKeyLayout: false,
+        path: `./src/data/`,
       },
     },
   ],
-};
+}

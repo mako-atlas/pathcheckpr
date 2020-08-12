@@ -1,0 +1,87 @@
+{
+  "title": "Privacy Policy for the Rastrea el Virus COVID Tracker App",
+  "updated": "August 5th, 2020",
+  "sections": [
+    {
+      "title": "About",
+      "items": [
+        "<p>This \"Privacy Policy\" describes the privacy practices of the Puerto Rico Health Department (\"PRHD\", \"we\", \"us\", or \"our\") in connection with the Rastrea el Virus mobile application (\"Rastrea el Virus\" or the \"App\") based on open source code from the PathCheck Foundation. This Privacy Policy also describes the rights and choices available to you with respect to your information when using the App.</p>"
+      ]
+    },
+    {
+      "title": "What is the Google/Apple Exposure Notifications (\"GAEN\") Protocol?",
+      "items": [
+        "<p>On April 10th, 2020, Google and Apple announced a partnership to enable the use of Bluetooth technology to help governments and health agencies reduce the spread of COVID-19 through exposure notifications, with privacy and security core to the design. We call this protocol GAEN. The protocol has been reviewed by privacy experts, and improving its implementation is the subject of ongoing research all around the world. Only authorized health authorities can release apps that access the operating system functions which Google and Apple have built for this purpose (the \"Exposure Notification API\").</p>"
+      ]
+    },
+    {
+      "title": "How GAEN technology works",
+      "items": [
+        "<p>Once the App requests that the operating system enable GAEN, and you authorize it to do so, your device will regularly send out Bluetooth signals. These Bluetooth beacons (or \"Chirps\") are random numbers generated using keys (the \"Keys\") so that they do not tie to any personally identifying information about you or your device, and change every 10 to 20 minutes for additional protection. Other devices will be listening for Chirps and broadcasting theirs as well. When your device receives another Chirp, the operating system will record and securely store that Chirp. At least once per day, only the authorized GAEN App will request that the operating system download a list of the generating Keys for Chirps that have been verified by us as positive for COVID-19 (the \"Positive Diagnosis Keys\"). Your device will check the list of Chirps it has recorded to see if they were generated using Positive Diagnosis Keys. If there is a match, the App will measure the closeness and duration of all exposures, and will decide whether to notify you with an exposure notification.</p>"
+      ]
+    },
+    {
+      "title": "How the ​Rastrea el Virus ​ App works",
+      "items": [
+        "<p>The App has the purpose of supporting the national public health response and members of the public during the COVID-19 crisis. Its function is exposure notification: to notify and connect you with us as quickly as possible should you have been in close and sustained contact with someone who has tested positive.</p>",
+        "<p>If you turn the Exposure Notifications API on, encounter someone who is also running Rastrea el Virus, and they are later diagnosed positive, then the App may send you an exposure notification according to its relevance criteria, which is updated according to ongoing global research and based on several factors:</p>",
+        "<ul><li>proximity, as best estimated by the device;</li><li>duration of contact; and</li><li>whether the contact was made within the last 14 days.</li></ul>"
+      ]
+    },
+    {
+      "title": "Security Measures",
+      "items": [
+        "<p>The decision process for giving any user an exposure notification uses a fully 'decentralized' privacy model. This means that any Positive Diagnosis Key matches made against Chirps that you have encountered are matched locally, on your device. Your device never uploads Chirps that it discovered. Matches are not made externally by us or any third party. This algorithm is designed to prevent tracking people’s movements or who they have contacted. It acts like an exposure badge.</p>",
+        "<p>Verification codes (the \"Verification Codes\") are short digit sequences that cryptographically limit access to reporting a positive test result. They are only sent out, under our authorization, to users who have a confirmed positive diagnosis. This protects the quality of exposure notifications that the App makes.</p>",
+        "<p>Keys used to generate Chirps are stored by the operating system and are not available to any but the authorized App for exposure notifications, and then only when unlocked by a Verification Code. The operating system confirms this access by presenting a security dialog.</p>"
+      ]
+    },
+    {
+      "title": "Data Collected from You",
+      "items": [
+        "<p>The App will not require you to provide any personal data to obtain exposure notifications. The App does not have access to file system storage to save any information.</p>"
+      ]
+    },
+    {
+      "title": "Data Generated by the ​Rastrea el Virus App",
+      "items": [
+        "<p>If you decide to authorize the Exposure Notifications API on your device, Chirps will be exchanged between your device and the devices of other users. If you test positive, and give your consent in the App, then the Positive Diagnosis Keys used to generate your Chirps will be shared with our registry.</p>",
+        "<p>As a consequence of how network traffic passes across the Internet, your Internet Protocol address (your \"IP Address\") is also inevitably transferred to PRHD Servers. While your data transmitted between the App and PRHD Servers includes your IP Address and it is considered personal data, we do not use your IP Address to identify you. Because Chirps are sent out anonymously and matched locally on your device, and because Verification Codes cryptographically limit access, PRHD Servers never need to identify you, even in order to upload Positive Diagnosis Keys.</p>"
+      ]
+    },
+    {
+      "title": "Third Party Agreements Affecting Data",
+      "items": [
+        "<p>PRHD is responsible for running the App and all infrastructure required to operate and maintain the App, including PRHD Servers. In that regard, third parties developed and operate PRHD Servers, as used to process Positive Diagnosis Keys. The App never uploads data to any servers without asking for consent first.</p>",
+        "<p>The following entities provide services to PRHD related to the App's functions.</p>",
+        "<ul><li>Puerto Rico's Science, Technology and Research Trust (\"SciTech\") is authorized by us to develop the App.</li><li>SciTech made an agreement with the PathCheck Foundation to supply the App's source code and assist with operations of PRHD Servers.</li><li>PathCheck's Positive Diagnosis Key server is an unmodified copy of Google's reference code.</li><li>Third parties who have been hired by us in order to assist with epidemiological case investigation and contact tracing (“Contact Tracers”) are authorized to give out Verification Codes as needed to upload Positive Diagnosis Keys to PRHD Servers.</li><li>PRHD, or an authorized Contact Tracer, may send Verification Codes to your phone via SMS, using Mitre's Sara Alert.</li></ul>",
+        "<p>Agreements are in place between PRHD, the Puerto Rico Science, Technology and Research Trust, and each of the above third parties, which set out their obligations and our obligations with regard to any personal data that is being processed.</p>",
+        "<p>The App can be downloaded free of charge from the Apple App Store and the Google Play Store. Apple and Google require account sign-on in order to make the App available to you. Neither company obtains any personal data from your use of the App or the Exposure Notifications API itself.</p>"
+      ]
+    },
+    {
+      "title": "Data Visible to Other Users of ​Rastrea el Virus",
+      "items": [
+        "<p>Chirps are sent to every device in proximity. While Chirps cannot directly identify any users, there are circumstances when a user could identify another based on the day of contact. This may occur if a user knows another user personally and recalls a specific day of meeting, and can rule out other candidates.</p>"
+      ]
+    },
+    {
+      "title": "How to Leave",
+      "items": [
+        "<p>To leave, delete the App from your device. You may also delete the COVID-19 Exposure Log (found by using the operating system settings search bar to search for \"COVID\"). Other than your IP Address, which may be stored on our servers and cannot be deleted but is not used to identify you, there is no information that can be used to identify you stored on any servers.</p>"
+      ]
+    },
+    {
+      "title": "Changes",
+      "items": [
+        "<p>This Privacy Policy can change. Should this Privacy Policy change, you will receive notification of the update in the App.</p>"
+      ]
+    },
+    {
+      "title": "Questions About This Policy",
+      "items": [
+        "<p>For legal questions about this policy, contact us at <a href=\"mailto:contactus@salud.pr.gov\">contactus@salud.pr.gov</a></p>"
+      ]
+    }
+  ]
+}
