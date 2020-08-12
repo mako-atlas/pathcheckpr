@@ -1,0 +1,22 @@
+.container {
+  width: 80%;
+  max-width: 1080px;
+  margin: auto;
+
+  &--expanded {
+    width: 85%;
+    max-width: 100%;
+  }
+}
+
+main.plain {
+  section {
+    margin-top: 1rem;
+    > p + p {
+      margin-top: 1rem;
+    }
+    > ul {
+      padding-left: 2rem;
+    }
+  }
+}
